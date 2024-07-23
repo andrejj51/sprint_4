@@ -123,6 +123,12 @@ func swimmingMeanSpeed(lengthPool, countPool int, duration float64) float64 {
 	}
 	return float64(lengthPool) * float64(countPool) / mInKm / duration
 }
+func swimmingMeanSpeed(lengthPool, countPool int, duration float64) float64 {
+	if duration == 0 {
+		return 0
+	}
+	return float64(lengthPool) * float64(countPool) / mInKm / duration
+}
 
 // SwimmingSpentCalories возвращает количество потраченных калорий при плавании.
 //
